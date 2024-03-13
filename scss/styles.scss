@@ -1,0 +1,97 @@
+html,
+body {
+  background-color: #f3f6f9;
+}
+
+.navbar {
+  transition: all 0.5s ease;
+}
+
+.navbar-sticky {
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#headerCarousel {
+  img {
+    object-fit: cover;
+    object-position: 100% 80%;
+  }
+  @media only screen and (min-width: 748px) {
+    .carousel-item {
+      height: 600px;
+    }
+    height: 600px;
+  }
+  li::marker {
+    font-size: 0;
+  }
+}
+
+.icons {
+  background: url(../assets/header-background.jpg) center center no-repeat;
+  background-size: cover;
+  margin-top: -100px;
+  padding-top: 150px;
+}
+
+#carouselPrecios {
+  a {
+    &.carousel-control-prev {
+      @media only screen and (min-width: 624px) {
+        left: -50px;
+      }
+    }
+    &.carousel-control-next {
+      @media only screen and (min-width: 624px) {
+        right: -50px;
+      }
+    }
+    span {
+      background-color: #000;
+    }
+  }
+}
+
+.drk:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 2;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: green;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  font-size: 24px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+#mapa {
+  height: 500px;
+}
+
+#telefonos {
+  @media only screen and (min-width: 748px) {
+    width: 350px;
+  }
+}

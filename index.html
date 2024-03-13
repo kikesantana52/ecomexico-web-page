@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ecomexico | Recolección de Basura y Residuos</title>
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="icon" href="assets/Logo.ico" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-sticky">
+      <div class="container py-2">
+        <a href="index.html" class="navbar-brand">
+          <img
+            src="assets/Logo_completo.png"
+            alt="Logo de la empresa"
+            width="255"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler mx-auto mx-sm-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+        >
+          <span class="navbar-toggler-icon"> </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <div
+            id="telefonos"
+            class="d-flex justify-content-between flex-xxl-row flex-lg-column flex-sm-row flex-column"
+          >
+            <h2 class="text-nowrap fs-1 mx-2 text-center my-auto">
+              ¡Contrata hoy!
+            </h2>
+            <div
+              class="d-flex text-nowrap justify-content-center justify-content-xxl-between justify-content-lg-around"
+            >
+              <p class="my-auto mx-2 fs-2">(+52 33)</p>
+              <div class="d-flex flex-column fs-5">
+                <p class="lh-1 my-auto">16 15 89 91</p>
+                <p class="lh-1 my-auto">16 54 12 94</p>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link fw-semibold">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#servicios" class="nav-link fw-semibold">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a href="#permisos" class="nav-link fw-semibold">Permisos</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="#contacto"
+                class="nav-link btn btn-outline-light fw-semibold px-4 mx-4 border"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- header -->
+    <header class="header">
+      <div class="hero text-white pt-7">
+        <div class="container-fluid p-0">
+          <div class="row">
+            <div class="d-flex flex-column justify-content-center h-100">
+              <div
+                id="headerCarousel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <ol class="carousel-indicators">
+                  <li
+                    data-bs-target="#headerCarousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li
+                    data-bs-target="#headerCarousel"
+                    data-bs-slide-to="1"
+                  ></li>
+                  <li
+                    data-bs-target="#headerCarousel"
+                    data-bs-slide-to="2"
+                  ></li>
+                </ol>
+                <div class="carousel-inner parallax">
+                  <div class="carousel-item drk active">
+                    <img
+                      class="d-block w-100 img-fluid"
+                      src="assets/carousel/camion-ecomexico.jpg"
+                      alt="First slide"
+                    />
+
+                    <div class="carousel-caption d-none d-md-block">
+                      <h1>Servicio de Recolección de Residuos</h1>
+                      <p>
+                        Somos una empresa consciente y dedicada a la
+                        Recolección, transporte, reciclaje y disposicion final
+                        de residuos comunes y de manejo especial
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item drk">
+                    <img
+                      class="d-block w-100 img-fluid"
+                      src="assets/carousel/carton.jpg"
+                      alt="Second slide"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Dejalo en nuestras manos</h3>
+                      <p>
+                        Contamos con diferentes servicios de recolección de
+                        basura, reciclaje, destruccion de archivo fiscal, apoyo
+                        y capacitación en la implementación de normas de
+                        separación de residuos.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-100 img-fluid"
+                      src="assets/carousel/papel.jpg"
+                      alt="Third slide"
+                    />
+                  </div>
+                </div>
+                <a
+                  class="carousel-control-prev"
+                  href="#headerCarousel"
+                  role="button"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a
+                  class="carousel-control-next"
+                  href="#headerCarousel"
+                  role="button"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="nosotros" class="py-5">
+      <div class="container-xl">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="display-6">Quiénes somos</h2>
+            <p>
+              EcoMéxico es una empresa mexicana, constituida en el año 2009,
+              dedicada a la recolección, transporte, manejo, separación,
+              tratamiento, etc., de los residuos, desde basura común hasta los
+              materiales reciclables. <br />
+              Ofrecemos nuestros servicios a la industria, comercio, escuelas,
+              fraccionamientos habitacionales, etc., cumpliendo con la
+              normatividad ambiental vigente.
+              <br />
+              Hoy en día, las exigencias de nuestros clientes, la competencia
+              por el mercado, las disposiciones gubernamentales y, sobre todo,
+              nuestro compromiso con el Medio Ambiente, nos obligan a
+              capacitarnos y actualizarnos continuamente para implementar
+              soluciones que beneficien a todos. Nos complace contar con
+              colaboradores altamente comprometidos y entregados al servicio del
+              cliente.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="assets/quienes_somos.jpg"
+              alt=""
+              class="img-fluid w-100"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mision-vision-valores" class="icons mt-5 parallax-container">
+      <div class="container-xl text-light parallax-content">
+        <div class="row hstack g-4 align-items-start">
+          <div class="col-md-4 d-flex gap-4">
+            <i class="fas fa-bullseye fa-3x text-light"></i>
+            <div>
+              <h5 class="fw-bold">Misión</h5>
+              <p class="text-light">
+                Ser solución a las necesidades de los clientes en materia
+                ambiental
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex gap-4">
+            <i class="fas fa-eye fa-3x text-secondary"></i>
+            <div>
+              <h5 class="fw-bold text-secondary">Visión</h5>
+              <p class="text-secondary">
+                Ser una empresa de calidad y confianza en el manejo de los
+                residuos, con absoluto aplicación de las disposiciones legales y
+                respetando el medio ambiente, donde nuestra gente hace la
+                diferencia en el servicio, todos los días.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex gap-4">
+            <i class="fas fa-hands-helping fa-3x text-light"></i>
+            <div>
+              <h5 class="fw-bold">Valores</h5>
+              <p class="text-light">
+                Calidad, confianza, compromiso, rentabilidad, actitud de
+                servicio y productividad
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg
+        class="frame-decoration pt-5"
+        data-name="Layer 2"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        viewBox="0 0 1920 192.275"
+      >
+        <defs>
+          <style>
+            .cls-1 {
+              fill: #f3f6f9;
+            }
+          </style>
+        </defs>
+        <title>frame-decoration</title>
+        <path
+          class="cls-1"
+          d="M0,158.755s63.9,52.163,179.472,50.736c121.494-1.5,185.839-49.738,305.984-49.733,109.21,0,181.491,51.733,300.537,50.233,123.941-1.562,225.214-50.126,390.43-50.374,123.821-.185,353.982,58.374,458.976,56.373,217.907-4.153,284.6-57.236,284.6-57.236V351.03H0V158.755Z"
+          transform="translate(0 -158.755)"
+        />
+      </svg>
+    </section>
+
+    <section id="servicios" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <img src="assets/carousel/6.png" alt="" class="w-100 img-fluid" />
+          </div>
+          <div class="col-md-6">
+            <h2 class="display-6">Servicios</h2>
+            <ul>
+              <li>Recolección de basura</li>
+              <li>
+                Recolección de Residuos de Manejo especial (Papel, Cartón,
+                plástico, Metales, textiles etc.)
+              </li>
+              <li>
+                Separación de residuos (Valorización) en Cumplimiento de la
+                NAE-SEMADES 007/2008
+              </li>
+              <li>
+                Apoyo en la implementación de la reciente norma de separación de
+                residuos.
+              </li>
+              <li>Destrucción de Archivo Fiscal</li>
+              <li>
+                Destrucción Fiscal (Inventarios Obsoletos y/o materiales fuera
+                de especificación o mala calidad)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="precios" class="py-5 bg-white">
+      <div class="container">
+        <h2 class="text-center">Nuestros precios</h2>
+        <div
+          id="carouselPrecios"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="text-center">
+                    <img
+                      src="assets/precios/bolsa jumbo.jpg"
+                      class="img-fluid"
+                      alt="Imagen ejemplo de bolsa jumbo"
+                    />
+                    <h5 class="mt-2 mb-1">Bolsa jumbo de basura</h5>
+                    <p class="mb-2">$41.50</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="text-center">
+                    <img
+                      src="assets/precios/tambo.jpg"
+                      class="img-fluid"
+                      alt="Imagen ejemplo de tambo capacidad de 200 lts."
+                    />
+                    <h5 class="mt-2 mb-1">Tambo (Capacidad de 200 lts)</h5>
+                    <p class="mb-2">$65.00</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="text-center">
+                    <img
+                      src="assets/precios/contenedor.jpg"
+                      class="img-fluid"
+                      alt="Imagen ejemplo de contenedor de 1 metro cubico"
+                    />
+                    <h5 class="mt-2 mb-1">Contenedor (1 metro cúbico)</h5>
+                    <p class="mb-2">$165.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="text-center">
+                    <img
+                      src="assets/precios/contenedor.jpg"
+                      class="img-fluid"
+                      alt="Imagen ejemplo de contenedor de 1.5 metro cubico"
+                    />
+                    <h5 class="mt-2 mb-1">Contenedor (1.5 metro cúbico)</h5>
+                    <p class="mb-2">$185.00</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="text-center">
+                    <img
+                      src="assets/precios/contenedor.jpg"
+                      class="img-fluid"
+                      alt="Imagen ejemplo de contenedor de 2 metro cubico"
+                    />
+                    <h5 class="mt-2 mb-1">Contenedor (2 metro cúbico)</h5>
+                    <p class="mb-2">$205.00</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="text-center">
+                    <img
+                      src="assets/precios/contenedor.jpg"
+                      class="img-fluid"
+                      alt="Imagen ejemplo de contenedor de 3 metro cubico"
+                    />
+                    <h5 class="mt-2 mb-1">Contenedor (3 metro cúbico)</h5>
+                    <p class="mb-2">$265.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Agrega más elementos carousel-item aquí según sea necesario -->
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselPrecios"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselPrecios"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="permisos" class="py-5">
+      <div class="container">
+        <p class="lead">
+          Operamos con total cumplimiento de las regulaciones y normativas
+          vigentes. Contamos con todos los permisos necesarios para gestionar la
+          disposición de residuos de manera eficiente y responsable,
+          garantizando así un servicio de calidad y confianza. Nuestra empresa
+          está debidamente autorizada por las autoridades competentes,
+          incluyendo los permisos de operación, REPSE, así como los permisos
+          municipales y estatales requeridos
+        </p>
+        <div class="row d-none d-md-flex">
+          <div class="col-4">
+            <img class="img-fluid" src="assets/permisos/movilidad.png" alt="" />
+          </div>
+          <div class="col-4">
+            <img class="img-fluid" src="assets/permisos/repse.png" alt="" />
+          </div>
+          <div class="col-4">
+            <img class="img-fluid" src="assets/permisos/SEMADET.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.567946537842!2d-103.44371402416587!3d20.646460400798286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ad9170debafb%3A0xb7f6eb3f62799ac3!2sRecolectora%20Ecomexico!5e0!3m2!1ses-419!2smx!4v1710266871619!5m2!1ses-419!2smx"
+        width="100%"
+        height="100%"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+    <!-- Contacto -->
+    <section id="contacto" class="py-4 bg-white">
+      <div class="container">
+        <h1 class="text-center mb-4">Contacto</h1>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  name="nombre"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label"
+                  >Correo electrónico:</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje:</label>
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  name="mensaje"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="mb-3">
+              <h5><i class="fas fa-phone-alt"></i> Teléfono:</h5>
+              <a href="tel:+523316158991">+52 33 16 15 89 91</a><br />
+              <a href="tel:+523316541294">+52 33 16 54 12 94</a>
+            </div>
+
+            <div class="mb-3">
+              <h5><i class="fas fa-envelope"></i> Correo electrónico:</h5>
+              <a href="mailto:ecomexico1@hotmail.com">ecomexico1@hotmail.com</a>
+            </div>
+
+            <div class="mb-3">
+              <h5><i class="fas fa-map-marker-alt"></i> Domicilio:</h5>
+              <p>Javier Mina 1325, Colli Urbano, 45070 Zapopan, Jal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="divider py-4 bg-dark"></section>
+    <!-- footer -->
+    <footer class="py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 justify-content-center d-flex mb-4">
+            <img src="assets/Logo.png" alt="" class="img-fluid" />
+          </div>
+          <div class="col-md-4">
+            <div class="row justify-content-center d-flex mb-4">
+              <div class="col-auto">
+                <a href="#" class="text-decoration-none me-3"
+                  ><i class="fab fa-facebook-square fa-3x"></i
+                ></a>
+              </div>
+              <div class="col-auto">
+                <a href="#" class="text-decoration-none me-3"
+                  ><i class="fab fa-instagram-square fa-3x"></i
+                ></a>
+              </div>
+              <div class="col-auto">
+                <a href="#" class="text-decoration-none"
+                  ><i class="fab fa-whatsapp-square fa-3x"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 align-items-center d-flex mb-4 flex-column">
+            <h5>Menú del Sitio:</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Acerca de</a></li>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col">
+            <p class="text-center">&copy; 2024 Todos los derechos reservados</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Whatsapp button -->
+    <a
+      href="https://wa.me/523319862224"
+      target="_blank"
+      class="whatsapp-btn"
+      data-bs-toggle="tooltip"
+      data-bs-placement="left"
+      title="¡Contáctanos!"
+      ><i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

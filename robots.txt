@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap:https://ecomexico.mx/sitemap.xml

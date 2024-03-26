@@ -20,12 +20,15 @@
     <title>
       Ecomexico | Recolección de Basura y Residuos - 404 página no encontrada
     </title>
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/styles.min.css" rel="stylesheet" />
-    <link rel="icon" href="assets/Logo.ico" />
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/styles.min.css" rel="stylesheet" />
+    <link rel="icon" href="/assets/Logo.ico" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
+      body {
+        margin: 0;
+      }
       .error-container {
         display: flex;
         flex-direction: column;
@@ -33,18 +36,26 @@
         align-items: center;
         height: 100vh;
         text-align: center;
+
+        background: url(/assets/404.jpg) center center no-repeat;
+        background-size: cover;
       }
 
       .error-code {
+        z-index: 1;
         font-size: 6em;
         margin: 0;
-        color: #555;
+        color: #c0c0c0;
       }
 
       .error-message {
+        z-index: 1;
         font-size: 2em;
         margin-top: 0.5em;
-        color: #777;
+        color: #a7a5a5;
+      }
+      .btn {
+        z-index: 1;
       }
     </style>
   </head>
@@ -54,7 +65,7 @@
       <div class="container py-2">
         <a href="/" class="navbar-brand">
           <img
-            src="assets/Logo_completo.png"
+            src="/assets/Logo_completo.png"
             alt="Logo de la empresa"
             width="255"
           />
@@ -110,6 +121,7 @@
     </nav>
 
     <div class="error-container">
+      <div class="dark-bg"></div>
       <h1 class="error-code">404</h1>
       <h2 class="error-message">Página no encontrada</h2>
       <a href="/" class="btn btn-primary mt-3">Regresar a inicio</a>
@@ -121,7 +133,7 @@
         <div class="row">
           <div class="col-md-4 justify-content-center d-flex mb-4">
             <img
-              src="assets/Logo_completo.png"
+              src="/assets/Logo_completo.png"
               alt="Logotipo ecomexico"
               class="img-fluid"
             />
@@ -176,7 +188,7 @@
       ><i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -184,6 +196,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>

@@ -17,18 +17,6 @@ body {
   font-size: xx-large;
 }
 
-#headerCarousel img {
-  object-fit: cover;
-  object-position: 100% 80%;
-}
-@media only screen and (min-width: 748px) {
-  #headerCarousel {
-    height: 600px;
-  }
-  #headerCarousel .carousel-item {
-    height: 600px;
-  }
-}
 #headerCarousel li::marker {
   font-size: 0;
 }
@@ -99,7 +87,7 @@ body {
 
 /* Estilos específicos para la imagen de fondo */
 #contacto {
-  background-image: url("../assets/contacto-background.jpg");
+  background-image: url("../assets/contacto-background.webp");
   /* Ajusta la altura de la sección según tus necesidades */
   background-attachment: fixed;
   background-position: center;
@@ -134,4 +122,54 @@ body {
   flex-direction: row;
   gap: 16px;
   justify-content: space-around;
+}
+
+.parallax-container {
+  height: 85vh; /* Ajusta la altura según tus necesidades */
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+}
+@media only screen and (max-width: 748px) {
+  .parallax-container {
+    height: 50vh;
+  }
+}
+
+.carousel-img {
+  height: 85vh; /* Ajusta la altura según tus necesidades */
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (max-width: 748px) {
+  .carousel-img {
+    height: 50vh;
+  }
+}
+
+#lista-precios {
+  margin-top: 140px;
+}
+#lista-precios th,
+#lista-precios td {
+  vertical-align: middle;
+  text-align: center;
+}
+#lista-precios .muted {
+  margin: 0;
+  font-size: small;
+}
+#lista-precios .bold {
+  font-weight: bold;
+}
+
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
 }

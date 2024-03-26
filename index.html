@@ -2,6 +2,13 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="EcoMéxico es una empresa mexicana,
+    dedicada a la recolección, transporte, manejo, separación,
+    y tratamiento de los residuos, desde basura común hasta los
+    materiales reciclables. "
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Language" content="es" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,10 +18,32 @@
       rel="stylesheet"
     />
     <title>Ecomexico | Recolección de Basura y Residuos</title>
-    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/styles.min.css" rel="stylesheet" />
     <link rel="icon" href="assets/Logo.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#formulario").submit(function (event) {
+          event.preventDefault(); // Evitar que se envíe el formulario de forma estándar
+
+          // Obtener los datos del formulario
+          var datosFormulario = $(this).serialize();
+
+          // Enviar la solicitud AJAX para procesar el formulario
+          $.ajax({
+            type: "POST",
+            url: "correo.php",
+            data: datosFormulario,
+            success: function (data) {
+              // Mostrar el resultado en algún lugar de la página
+              alert("Correo enviado con exito");
+            },
+          });
+        });
+      });
+    </script>
   </head>
   <body>
     <!-- Navigation -->
@@ -55,32 +84,16 @@
           </div>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a
-                onclick="scrollToSection('nosotros')"
-                href="#nosotros"
-                class="nav-link fw-semibold"
-                >Nosotros</a
-              >
+              <a href="#nosotros" class="nav-link fw-semibold">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a href="#servicios" class="nav-link fw-semibold">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a href="#permisos" class="nav-link fw-semibold">Permisos</a>
             </li>
             <li class="nav-item">
               <a
-                onclick="scrollToSection('servicios')"
-                href="#servicios"
-                class="nav-link fw-semibold"
-                >Servicios</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                onclick="scrollToSection('permisos')"
-                href="#permisos"
-                class="nav-link fw-semibold"
-                >Permisos</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                onclick="scrollToSection('contacto')"
                 href="#contacto"
                 class="nav-link btn btn-outline-light fw-semibold px-4 mx-4 border"
                 >Contacto</a
@@ -94,8 +107,9 @@
     <header id="header" class="header">
       <div class="hero text-white pt-7">
         <div class="container-fluid p-0">
-          <div class="row">
-            <div class="d-flex flex-column justify-content-center h-100">
+          <div class="row m-0">
+            <div class="parallax-container">
+              <!--  -->
               <div
                 id="headerCarousel"
                 class="carousel slide"
@@ -118,11 +132,12 @@
                 </ol>
                 <div class="carousel-inner parallax">
                   <div class="carousel-item drk active">
-                    <img
-                      class="d-block w-100 img-fluid"
-                      src="assets/carousel/camion-ecomexico.jpg"
-                      alt="Camioneta de recolección de residuos de ecomexico"
-                    />
+                    <div
+                      class="carousel-img"
+                      style="
+                        background-image: url('assets/carousel/camion-ecomexico-logo.jpg');
+                      "
+                    ></div>
 
                     <div class="carousel-caption">
                       <h1>
@@ -132,11 +147,12 @@
                     </div>
                   </div>
                   <div class="carousel-item drk">
-                    <img
-                      class="d-block w-100 img-fluid"
-                      src="assets/carousel/carton.jpg"
-                      alt="Reciclable que recogemos en ecomexico (Cartón)"
-                    />
+                    <div
+                      class="carousel-img"
+                      style="
+                        background-image: url('assets/reciclables/carton.jpg');
+                      "
+                    ></div>
                     <div class="carousel-caption">
                       <h3>
                         (En el caso del material reciclable) Pagamos de contado
@@ -148,21 +164,26 @@
                     </div>
                   </div>
                   <div class="carousel-item drk">
-                    <img
-                      class="d-block w-100 img-fluid"
-                      src="assets/carousel/mapa guadalajara.jpg"
-                      alt="Reciclable que recogemos en ecomexico (Papel)"
-                    />
+                    <div
+                      class="carousel-img"
+                      style="
+                        background-image: url('assets/carousel/mapa guadalajara.jpg');
+                      "
+                    ></div>
                     <div class="carousel-caption">
                       <h3>
                         Servicio a toda el área metropolitana de Guadalajara.
                       </h3>
                       <p class="d-none d-md-block">
-                        Costo mínimo de recolección por visita $135.00
+                        Costo mínimo de recolección por visita $169.00
                       </p>
-                      <button class="btn btn-primary">
+                      <a
+                        href="https://wa.me/523332369049?text=Me%20regalar%C3%ADas%20informes,%20por%20favor"
+                        target="_blank"
+                        class="btn btn-primary"
+                      >
                         ¡Consulta cobertura!
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -201,110 +222,107 @@
       <div class="container mt-5">
         <div class="row justify-content-center">
           <div class="col-md-4 mb-4">
-            <div class="item">
-              <div class="text-center">
-                <i class="fas fa-trash-alt"></i>
+            <div class="card item shadow">
+              <div class="card-body text-center front">
+                <i class="text-primary fas fa-trash-alt"></i>
+                <h3 class="card-title item-title">
+                  Recolección de basura común
+                </h3>
+                <p class="card-text">En bolsa, tambos, contenedores y otros.</p>
               </div>
-              <h3 class="text-center item-title">
-                Recolección de basura común
-              </h3>
-              <p class="text-center">En bolsa, tambos, contenedores y otros.</p>
             </div>
           </div>
 
           <div class="col-md-4 mb-4">
-            <div class="item">
-              <div class="text-center">
-                <i class="fas fa-recycle"></i>
+            <div class="card item shadow">
+              <div class="card-body text-center front">
+                <i class="text-primary fas fa-recycle"></i>
+                <h3 class="card-title item-title">
+                  Recolección de Residuos valorizables
+                </h3>
+                <p class="card-text">
+                  Recogemos diferentes tipos de residuos y reciclables, tales
+                  como Papel, Cartón, plástico, Metales y tarimas.
+                </p>
               </div>
-              <h3 class="text-center item-title">
-                Recolección de Residuos valorizables
-              </h3>
-              <p class="text-center">
-                Recogemos diferentes tipos de residuos y reciclables, tales como
-                Papel, Cartón, plástico, Metales y tarimas.
-              </p>
             </div>
           </div>
 
           <div class="col-md-4 mb-4">
-            <div class="item">
-              <div class="text-center">
-                <i class="fas fa-file-invoice"></i>
+            <div class="card item shadow">
+              <div class="card-body text-center front">
+                <i class="text-primary fas fa-file-invoice"></i>
+                <h3 class="card-title item-title">
+                  Comprobantes digitales y cartas manifiesto
+                </h3>
+                <p class="card-text">
+                  Inovamos para que tengas pruebas digitales de recolección en
+                  un plazo de 24 horas después de la recolección
+                </p>
               </div>
-              <h3 class="text-center item-title">
-                Comprobantes digitales y cartas manifiesto
-              </h3>
-              <p class="text-center">
-                Inovamos para que tengas pruebas digitales de recolección en un
-                plazo de 24 horas después de la recolección
-              </p>
             </div>
           </div>
 
           <div class="col-md-4 mb-4">
-            <div class="item">
-              <div class="text-center">
-                <i class="fas fa-dumpster"></i>
+            <div class="card item shadow">
+              <div class="card-body text-center front">
+                <i class="text-primary fas fa-dumpster"></i>
+                <h3 class="card-title item-title">Separación de residuos</h3>
+                <p class="card-text">
+                  Apoyo en la implementación de la norma de separación de
+                  residuos. En cumplimiento de la norma
+                  <a
+                    target="_blank"
+                    href="https://transparencia.info.jalisco.gob.mx/transparencia/informacion-fundamental/13080"
+                    >NAE-SEMADET 007/2008.</a
+                  >
+                </p>
               </div>
-              <h3 class="text-center item-title">Separación de residuos</h3>
-              <p class="text-center">
-                Apoyo en la implementación de la norma de separación de
-                residuos. En cumplimiento de la norma
-                <a
-                  target="_blank"
-                  href="https://transparencia.info.jalisco.gob.mx/transparencia/informacion-fundamental/13080"
-                  >NAE-SEMADET 007/2008.</a
-                >
-              </p>
             </div>
           </div>
 
           <div class="col-md-4 mb-4">
-            <div class="item">
-              <div class="text-center">
-                <i class="fas fa-file-archive"></i>
+            <div class="card item shadow">
+              <div class="card-body text-center front">
+                <i class="text-primary fas fa-file-archive"></i>
+                <h3 class="card-title item-title">
+                  Destrucción de Archivo Fiscal
+                </h3>
+                <p class="card-text">
+                  Con pruebas digitales y un informe de destino final de la
+                  destrucción.
+                </p>
               </div>
-              <h3 class="text-center item-title">
-                Destrucción de Archivo Fiscal
-              </h3>
-              <p class="text-center">
-                Con pruebas digitales y un informe de destino final de la
-                destrucción.
-              </p>
             </div>
           </div>
 
           <div class="col-md-4 mb-4">
-            <div class="item">
-              <div class="text-center">
-                <i class="fas fa-ban"></i>
+            <div class="card item shadow">
+              <div class="card-body text-center front">
+                <i class="text-primary fas fa-ban"></i>
+                <h3 class="card-title item-title">Destrucción Fiscal</h3>
+                <p class="card-text">
+                  Con pruebas digitales y un informe de destino final de la
+                  destrucción.
+                </p>
               </div>
-              <h3 class="text-center item-title">Destrucción Fiscal</h3>
-              <p class="text-center">
-                Con pruebas digitales y un informe de destino final de la
-                destrucción.
-              </p>
             </div>
           </div>
 
           <div class="col-md-4 mb-4">
-            <div class="item">
-              <div class="text-center">
-                <i class="fas fa-file-contract"></i>
+            <div class="card item shadow">
+              <div class="card-body text-center front">
+                <i class="text-primary fas fa-file-contract"></i>
+                <h3 class="card-title item-title">Contratos de recolección</h3>
+                <p class="card-text">
+                  Nuestras recolecciones se formalizan mediante un contrato
+                </p>
               </div>
-              <h3 class="text-center item-title">Contratos de recolección</h3>
-              <p class="text-center">
-                Nuestras recolecciones se formalizan mediante un contrato
-              </p>
             </div>
           </div>
-
-          <!-- Repeat the pattern for additional items -->
         </div>
       </div>
     </section>
-
     <section id="precios" class="py-5 bg-white">
       <div class="container text-center">
         <h2 class="display-6 text-center">Nuestros precios</h2>
@@ -327,7 +345,7 @@
                       alt="Imagen ejemplo de bolsa jumbo"
                     />
                     <h4 class="mt-2 mb-1">Bolsa jumbo de basura</h4>
-                    <p class="mb-2">$41.50</p>
+                    <p class="mb-2">$61.00</p>
                   </div>
                 </div>
                 <div class="col">
@@ -338,7 +356,7 @@
                       alt="Imagen ejemplo de tambo capacidad de 200 lts."
                     />
                     <h4 class="mt-2 mb-1">Tambo (Capacidad de 200 lts)</h4>
-                    <p class="mb-2">$65.00</p>
+                    <p class="mb-2">$84.00</p>
                   </div>
                 </div>
                 <div class="col">
@@ -452,7 +470,7 @@
           </div>
           <div class="col-md-6">
             <img
-              src="assets/quienes_somos.jpg"
+              src="assets/quienes_somos.webp"
               alt="Naturaleza y limpieza"
               class="img-fluid w-100"
             />
@@ -469,7 +487,7 @@
     <section id="mision-vision-valores" class="icons mt-5">
       <div class="container text-light">
         <div class="row hstack g-4 align-items-start">
-          <div class="col-md-4 d-flex gap-4">
+          <div class="col-md-12 d-flex gap-4">
             <i class="fas fa-bullseye fa-3x text-light"></i>
             <div>
               <h5 class="fw-bold">Misión</h5>
@@ -481,7 +499,7 @@
             </div>
           </div>
 
-          <div class="col-md-4 d-flex gap-4">
+          <div class="col-md-12 d-flex gap-4">
             <i class="fas fa-eye fa-3x text-secondary"></i>
             <div>
               <h5 class="fw-bold text-secondary">Visión</h5>
@@ -498,7 +516,7 @@
             </div>
           </div>
 
-          <div class="col-md-4 d-flex gap-4">
+          <div class="col-md-12 d-flex gap-4">
             <i class="fas fa-hands-helping fa-3x text-light"></i>
             <div>
               <h5 class="fw-bold">Valores</h5>
@@ -545,22 +563,22 @@
           municipales y estatales requeridos con el permiso
           <b>SEMADET DR0740/19-29</b>
         </p>
-        <div class="row">
-          <div class="col-md-4 mb-4 my-auto text-center">
-            <img
-              class="img-fluid"
-              src="assets/permisos/SEMADET_black.png"
-              alt="Logotipo SEMADET"
-            />
-          </div>
-          <div class="col-md-4 mb-4 my-auto text-center">
+        <div class="mb-4 text-center">
+          <img
+            class="img-fluid"
+            src="assets/permisos/SEMADET_black.png"
+            alt="Logotipo SEMADET"
+          />
+        </div>
+        <div class="row d-md-flex d-none">
+          <div class="col-md-6 mb-4 my-auto text-center p-4">
             <img
               class="img-fluid"
               src="assets/permisos/REPSE.png"
               alt="Logotipo REPSE"
             />
           </div>
-          <div class="col-md-4 mb-4 my-auto text-center">
+          <div class="col-md-6 mb-4 my-auto text-center p-4">
             <img
               class="img-fluid"
               src="assets/permisos/movilidad.png"
@@ -599,7 +617,7 @@
             </div>
           </div>
           <div class="col-md-6 mb-4">
-            <form>
+            <form id="formulario" action="correo.php" method="post">
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre: *</label>
                 <input
@@ -612,7 +630,7 @@
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label"
-                  >Correo electrónico:</label
+                  >Correo electrónico: *</label
                 >
                 <input
                   type="email"
@@ -623,17 +641,16 @@
                 />
               </div>
               <div class="mb-3">
-                <label for="email" class="form-label">Teléfono:</label>
+                <label for="telefono" class="form-label">Teléfono:</label>
                 <input
-                  type="email"
+                  type="telefono"
                   class="form-control"
-                  id="email"
-                  name="email"
-                  required
+                  id="telefono"
+                  name="telefono"
                 />
               </div>
               <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje:</label>
+                <label for="mensaje" class="form-label">Mensaje: *</label>
                 <textarea
                   class="form-control"
                   id="mensaje"
@@ -677,17 +694,19 @@
           <div class="col-md-4">
             <div class="row justify-content-center d-flex mb-4">
               <div class="col-auto">
-                <a href="#" class="text-decoration-none me-3"
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/profile.php?id=100063988036416"
+                  class="text-decoration-none me-3"
                   ><i class="fab fa-facebook-square fa-3x"></i
                 ></a>
               </div>
+
               <div class="col-auto">
-                <a href="#" class="text-decoration-none me-3"
-                  ><i class="fab fa-instagram-square fa-3x"></i
-                ></a>
-              </div>
-              <div class="col-auto">
-                <a href="#" class="text-decoration-none"
+                <a
+                  target="_blank"
+                  href="https://wa.me/523332369049?text=Me%20regalar%C3%ADas%20informes,%20por%20favor"
+                  class="text-decoration-none"
                   ><i class="fab fa-whatsapp-square fa-3x"></i
                 ></a>
               </div>

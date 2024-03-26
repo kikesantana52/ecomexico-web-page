@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="EcoMéxico es una empresa mexicana,
+    dedicada a la recolección, transporte, manejo, separación,
+    y tratamiento de los residuos, desde basura común hasta los
+    materiales reciclables. "
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Language" content="es" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ecomexico | Recolección de Basura y Residuos | Precios</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/styles.min.css" rel="stylesheet" />
+    <link rel="icon" href="assets/Logo.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#formulario").submit(function (event) {
+          event.preventDefault(); // Evitar que se envíe el formulario de forma estándar
+
+          // Obtener los datos del formulario
+          var datosFormulario = $(this).serialize();
+
+          // Enviar la solicitud AJAX para procesar el formulario
+          $.ajax({
+            type: "POST",
+            url: "correo.php",
+            data: datosFormulario,
+            success: function (data) {
+              // Mostrar el resultado en algún lugar de la página
+              alert("Correo enviado con exito");
+            },
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-sticky">
+      <div class="container py-2">
+        <a href="/" class="navbar-brand">
+          <img
+            src="assets/Logo_completo.png"
+            alt="Logo de la empresa"
+            width="255"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler mx-auto mx-sm-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+        >
+          <span class="navbar-toggler-icon"> </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <div
+            id="telefonos"
+            class="d-flex justify-content-between flex-xxl-row flex-lg-column flex-sm-row flex-column"
+          >
+            <h2 class="text-nowrap fs-1 mx-2 text-center my-auto">
+              ¡Contrata hoy!
+            </h2>
+            <div
+              class="d-flex text-nowrap justify-content-center justify-content-xxl-between justify-content-lg-around"
+            >
+              <div class="d-flex flex-column fs-5">
+                <p class="lh-1 my-auto">33 16 15 89 91</p>
+                <p class="lh-1 my-auto">33 32 36 90 49</p>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="/index.html#nosotros" class="nav-link fw-semibold"
+                >Nosotros</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/#servicios" class="nav-link fw-semibold">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a href="/#permisos" class="nav-link fw-semibold">Permisos</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="#contacto"
+                class="nav-link btn btn-outline-light fw-semibold px-4 mx-4 border"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="lista-precios" class="py-4">
+      <h2 class="display-6 text-center mb-4">Nuestros precios</h2>
+      <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Contenedor</th>
+              <th scope="col">Precio*</th>
+              <th scope="col">Imagen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Bolsa Jumbo</th>
+              <td>$61.00</td>
+              <td>
+                <img
+                  src="assets/precios/bolsa jumbo.jpg"
+                  alt="Servicio de recolección de basura en Bolsa Jumbo EcoMéxico"
+                  class="img-fluid"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Tambo (Cap. 200 lts.)</th>
+              <td>$84.00</td>
+              <td>
+                <img
+                  src="assets/precios/tambo.jpg"
+                  alt="Servicio de recolección de basura en Tambos EcoMéxico"
+                  class="img-fluid"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Conetendor (1 metro cúbico)</th>
+              <td>$220.00</td>
+              <td>
+                <img
+                  src="assets/precios/contenedor.jpg"
+                  alt="Servicio de recolección de basura en Contenedor EcoMéxico"
+                  class="img-fluid"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Conetendor (1.5 metros cúbico)</th>
+              <td>$272.00</td>
+              <td>
+                <img
+                  src="assets/precios/contenedor.jpg"
+                  alt="Servicio de recolección de basura en Contenedor EcoMéxico"
+                  class="img-fluid"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Conetendor (2 metros cúbico)</th>
+              <td>$343.00</td>
+              <td>
+                <img
+                  src="assets/precios/contenedor.jpg"
+                  alt="Servicio de recolección de basura en Contenedor EcoMéxico"
+                  class="img-fluid"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Conetendor (3 metros cúbico)</th>
+              <td>$498.00</td>
+              <td>
+                <img
+                  src="assets/precios/contenedor.jpg"
+                  alt="Servicio de recolección de basura en Contenedor EcoMéxico"
+                  class="img-fluid"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Conetendor (4 metros cúbico)</th>
+              <td>$663.00</td>
+              <td>
+                <img
+                  src="assets/precios/contenedor.jpg"
+                  alt="Servicio de recolección de basura en Contenedor EcoMéxico"
+                  class="img-fluid"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Conetendor (5 metros cúbico)</th>
+              <td>$827.00</td>
+              <td>
+                <img
+                  src="assets/precios/contenedor.jpg"
+                  alt="Servicio de recolección de basura en Contenedor EcoMéxico"
+                  class="img-fluid"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Conetendor (6 metros cúbico)</th>
+              <td>$951.00</td>
+              <td>
+                <img
+                  src="assets/precios/contenedor.jpg"
+                  alt="Servicio de recolección de basura en Contenedor EcoMéxico"
+                  class="img-fluid"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Conetendor (7 metros cúbico)</th>
+              <td>$1,108.00</td>
+              <td>
+                <img
+                  src="assets/precios/contenedor.jpg"
+                  alt="Servicio de recolección de basura en Contenedor EcoMéxico"
+                  class="img-fluid"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-center">
+          <p class="lead">¿Tienes alguna otra medida que quisieras cotizar?</p>
+          <a
+            href="https://wa.me/523332369049?text=Me%20regalar%C3%ADas%20informes,%20por%20favor"
+            target="_blank"
+            class="btn btn-primary mb-4"
+          >
+            Contáctanos
+          </a>
+          <p class="muted">
+            *Precio puede variar dependiendo del peso y volumen.
+          </p>
+          <p class="muted">Costo mínimo de Recolección por visita $169.00</p>
+          <p class="muted bold">
+            Nota: Los contenedores se dejan en comodato con un mínimo de 2
+            recolecciones por semana.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Contacto -->
+    <section id="contacto" class="py-4 text-light">
+      <div class="dark-bg"></div>
+      <div class="container">
+        <h2 class="display-6 text-center mb-4 text-light">Contacto</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="mb-3">
+              <h4><i class="fas fa-phone-alt"></i> Teléfono:</h4>
+              <a class="display-6" href="tel:+523316158991">33 16 15 89 91</a
+              ><br />
+              <a class="display-6" href="tel:+523316158991">33 32 36 90 49</a
+              ><br />
+              <a class="display-6" href="tel:+523316541294">33 16 54 12 94</a>
+            </div>
+
+            <div class="mb-3">
+              <h4><i class="fas fa-envelope"></i> Correo electrónico:</h4>
+              <a class="display-6" href="mailto:ecomexico1@hotmail.com"
+                >ecomexico1@hotmail.com</a
+              >
+            </div>
+
+            <div class="mb-3">
+              <h4><i class="fas fa-map-marker-alt"></i> Domicilio:</h4>
+              <p>Javier Mina 1325, Colli Urbano, 45070 Zapopan, Jal.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <form id="formulario" action="correo.php" method="post">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre: *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  name="nombre"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label"
+                  >Correo electrónico: *</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono:</label>
+                <input
+                  type="telefono"
+                  class="form-control"
+                  id="telefono"
+                  name="telefono"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje: *</label>
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  name="mensaje"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Solicita tu cotización
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.567946537842!2d-103.44371402416587!3d20.646460400798286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ad9170debafb%3A0xb7f6eb3f62799ac3!2sRecolectora%20Ecomexico!5e0!3m2!1ses-419!2smx!4v1710266871619!5m2!1ses-419!2smx"
+        width="100%"
+        height="100%"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <section class="divider py-4 bg-dark"></section>
+    <!-- footer -->
+    <footer class="py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 justify-content-center d-flex mb-4">
+            <img
+              src="assets/Logo_completo.png"
+              alt="Logotipo ecomexico"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-4">
+            <div class="row justify-content-center d-flex mb-4">
+              <div class="col-auto">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/profile.php?id=100063988036416"
+                  class="text-decoration-none me-3"
+                  ><i class="fab fa-facebook-square fa-3x"></i
+                ></a>
+              </div>
+
+              <div class="col-auto">
+                <a
+                  target="_blank"
+                  href="https://wa.me/523332369049?text=Me%20regalar%C3%ADas%20informes,%20por%20favor"
+                  class="text-decoration-none"
+                  ><i class="fab fa-whatsapp-square fa-3x"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 align-items-center d-flex mb-4 flex-column">
+            <h5>Menú del Sitio:</h5>
+            <ul class="list-unstyled">
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/#nosotros">Nosotros</a></li>
+              <li><a href="/#servicios">Servicios</a></li>
+              <li><a href="/#permisos">Permisos</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col">
+            <p class="text-center">&copy; 2024 Todos los derechos reservados</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Whatsapp button Texto: -->
+    <a
+      href="https://wa.me/523332369049?text=Me%20regalar%C3%ADas%20informes,%20por%20favor"
+      target="_blank"
+      class="whatsapp-btn"
+      data-bs-toggle="tooltip"
+      data-bs-placement="left"
+      title="¡Contáctanos!"
+      ><i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
